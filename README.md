@@ -26,6 +26,9 @@ To install this tool, follow these steps:
      C:\php;
      ```
 
+3. Important!
+If you have any PHP installation, you will need to remove the path of that installation.
+
 
 After completing these steps, you may need to restart your Windows system.
 
