@@ -1,0 +1,74 @@
+{
+    "versions": [
+        {
+            "name": "52",
+            "version": "5.2.17",
+            "url": "https://windows.php.net/downloads/releases/archives/php-5.2.17-Win32-VC6-x86.zip"
+        },
+        {
+            "name": "53",
+            "version": "5.3.29",
+            "url": "https://windows.php.net/downloads/releases/archives/php-5.3.29-Win32-VC9-x86.zip"
+        },
+        {
+            "name": "54",
+            "version": "5.4.44",
+            "url": "https://windows.php.net/downloads/releases/archives/php-5.4.44-Win32-VC9-x86.zip"
+        },
+        {
+            "name": "55",
+            "version": "5.5.38",
+            "url": "https://windows.php.net/downloads/releases/archives/php-5.5.38-Win32-VC11-x86.zip"
+        },
+        {
+            "name": "56",
+            "version": "5.6.40",
+            "url": "https://windows.php.net/downloads/releases/archives/php-5.6.40-Win32-VC11-x86.zip"
+        },
+        {
+            "name": "70",
+            "version": "7.0.33",
+            "url": "https://windows.php.net/downloads/releases/archives/php-7.0.33-Win32-VC14-x86.zip"
+        },
+        {
+            "name": "71",
+            "version": "7.1.33",
+            "url": "https://windows.php.net/downloads/releases/archives/php-7.1.33-Win32-VC14-x86.zip"
+        },
+        {
+            "name": "72",
+            "version": "7.2.34",
+            "url": "https://windows.php.net/downloads/releases/archives/php-7.2.34-Win32-VC15-x86.zip"
+        },
+        {
+            "name": "73",
+            "version": "7.3.33",
+            "url": "https://windows.php.net/downloads/releases/archives/php-7.3.33-Win32-VC15-x86.zip"
+        },
+        {
+            "name": "74",
+            "version": "7.4.33",
+            "url": "https://windows.php.net/downloads/releases/archives/php-7.4.33-Win32-vc15-x86.zip"
+        },
+        {
+            "name": "80",
+            "version": "8.0.30",
+            "url": "https://windows.php.net/downloads/releases/archives/php-8.0.30-Win32-vs16-x86.zip"
+        },
+        {
+            "name": "81",
+            "version": "8.1.29",
+            "url": "https://windows.php.net/downloads/releases/php-8.1.29-Win32-vs16-x86.zip"
+        },
+        {
+            "name": "82",
+            "version": "8.2.21",
+            "url": "https://windows.php.net/downloads/releases/php-8.2.21-Win32-vs16-x86.zip"
+        },
+        {
+            "name": "83",
+            "version": "8.3.9",
+            "url": "https://windows.php.net/downloads/releases/php-8.3.9-Win32-vs16-x86.zip"
+        }
+    ]
+}

@@ -1,0 +1,2 @@
+if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" $version" -Verb RunAs; exit }
+    [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\multiphp\bin;C:\php", "User")
