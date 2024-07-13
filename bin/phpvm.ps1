@@ -4,23 +4,23 @@ $action2 = $args[1]
 # Write-Host "$action1 $action2"
 
 if($action1 -eq "install") {
-    C:\multiphp\bin\src\installVersion.ps1 $action2
+    C:\PhpVM\src\installVersion.ps1 $action2
 }
 
 if($action1 -eq "list") {
-    C:\multiphp\bin\src\showVersions.ps1
+    C:\PhpVM\src\showVersions.ps1
 }
 
 if($action1 -eq "set") {
-    C:\multiphp\bin\src\setVersion.ps1 $action2
+    C:\PhpVM\src\setVersion.ps1 $action2
 }
 
 if($action1 -eq "remove") {
-    C:\multiphp\bin\src\removeVersion.ps1 $action2
+    C:\PhpVM\src\removeVersion.ps1 $action2
 }
 
 if($action1 -eq "path") {
-    C:\multiphp\bin\src\setPaths.ps1
+    C:\PhpVM\src\setPaths.ps1
 }
 
 if($action1 -eq "help" -or !$action1) {

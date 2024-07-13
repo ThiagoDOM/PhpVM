@@ -1,9 +1,9 @@
 if ([Environment]::Is64BitOperatingSystem) {
-    $jsonContent = Get-Content 'C:\multiphp\bin\src\list_x64.json' | ConvertFrom-Json
+    $jsonContent = Get-Content 'C:\PhpVM\src\list_x64.json' | ConvertFrom-Json
     $os = "x64"
 }
 else {
-    $jsonContent = Get-Content 'C:\multiphp\bin\src\list_x86.json' | ConvertFrom-Json
+    $jsonContent = Get-Content 'C:\PhpVM\src\list_x86.json' | ConvertFrom-Json
     $os = "x86"
 }
 
