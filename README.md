@@ -33,3 +33,7 @@ Now, in your console, type the following command:
 ```bash
 phpvm
 ```
+
+## Screenshots
+
+![](https://i.imgur.com/1iNftSd.png)
