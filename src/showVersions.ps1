@@ -10,7 +10,7 @@ $versions = $jsonContent.versions
 
 # Exiba cada versão
 
-Write-Host "All versions is Thread Safe"
+Write-Host "All versions is Non Thread Safe"
 Write-Host "System: $os"
 
 foreach ($version in $versions) {
