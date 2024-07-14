@@ -1,0 +1,1 @@
+code C:\php\php.ini

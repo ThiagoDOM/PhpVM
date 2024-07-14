@@ -23,6 +23,10 @@ if($action1 -eq "path") {
     C:\PhpVM\src\setPaths.ps1
 }
 
+if($action1 -eq "ini") {
+    C:\PhpVM\src\openIni.ps1
+}
+
 if($action1 -eq "help" -or !$action1) {
     Write-Host ""
     Write-Host "List of commands:"
@@ -36,6 +40,8 @@ if($action1 -eq "help" -or !$action1) {
     Write-Host "  -remove specific version of PHP from your windows"
     Write-Host " phpvm path" -ForegroundColor Green
     Write-Host "  -add paths to Enviroment Variable PATH "
+    Write-Host " phpvm ini" -ForegroundColor Green
+    Write-Host "  -open php.ini from current version in VS Code "
     Write-Host ""
 }
     
