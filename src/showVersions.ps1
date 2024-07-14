@@ -1,5 +1,6 @@
 if ([Environment]::Is64BitOperatingSystem) {
     try {
+        $web_client = new-object system.net.webclient
         $jsonContent = $web_client.DownloadString("https://raw.githubusercontent.com/ThiagoDOM/PhpVM/main/src/list_x64.json") | ConvertFrom-Json
     }
     catch {
@@ -9,6 +10,7 @@ if ([Environment]::Is64BitOperatingSystem) {
 }
 else {
     try {
+        $web_client = new-object system.net.webclient
         $jsonContent = $web_client.DownloadString("https://raw.githubusercontent.com/ThiagoDOM/PhpVM/main/src/list_x86.json") | ConvertFrom-Json 2>$null
     }
     catch {
