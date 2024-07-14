@@ -39,4 +39,4 @@ phpvm
 
 ## Screenshots
 
-![](https://i.imgur.com/6lAZJ4q.png)
+![](https://i.imgur.com/5Q4nXRx.png)
