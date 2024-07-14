@@ -1,10 +1,18 @@
 if ([Environment]::Is64BitOperatingSystem) {
-    $jsonContent = Get-Content 'C:\PhpVM\src\list_x64.json' | ConvertFrom-Json
-    $os = "x64"
+    try {
+        $jsonContent = $web_client.DownloadString("https://raw.githubusercontent.com/ThiagoDOM/PhpVM/main/src/list_x64.json") | ConvertFrom-Json
+    }
+    catch {
+        $jsonContent = Get-Content 'C:\PhpVM\src\list_x64.json' | ConvertFrom-Json
+    }
 }
 else {
-    $jsonContent = Get-Content 'C:\PhpVM\src\list_x86.json' | ConvertFrom-Json
-    $os = "x86"
+    try {
+        $jsonContent = $web_client.DownloadString("https://raw.githubusercontent.com/ThiagoDOM/PhpVM/main/src/list_x86.json") | ConvertFrom-Json 2>$null
+    }
+    catch {
+        $jsonContent = Get-Content 'C:\PhpVM\src\list_x86.json' | ConvertFrom-Json
+    }
 }
 
 $selVersion = $args[0]
@@ -20,13 +28,14 @@ foreach ($version in $versions) {
 }
 
 if ($url) {
-    if($url -Match "x64") {
+    if ($url -Match "x64") {
         Write-Host "Version: $ver x64"
-    } else {
+    }
+    else {
         Write-Host "Version: $ver x86"
     }
-    # Write-Host "URL: $url"
-} else {
+}
+else {
     Write-Host "Version not found"
 }
 
