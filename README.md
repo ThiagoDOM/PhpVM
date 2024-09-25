@@ -3,8 +3,10 @@
 
 This utility was created in PowerShell (ps1). To execute scripts in your Windows terminal, you'll need to adjust the "Execution Policy." Run the following command to do so:
 
+These scripts are unsigned, run at your own risk!
+
 ```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy -ExecutionPolicy Bypass
 ```
 
 For more information about execution policies, check out this [link](https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4).
