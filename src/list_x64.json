@@ -72,8 +72,8 @@
         },
         {
             "name": "84",
-            "version": "8.4.0alpha1",
-            "url": "https://windows.php.net/downloads/qa/php-8.4.0RC4-Win32-vs17-x64.zip.zip"
+            "version": "8.4.0RC4",
+            "url": "https://windows.php.net/downloads/qa/php-8.4.0RC4-Win32-vs17-x64.zip"
         }
     ]
 }
