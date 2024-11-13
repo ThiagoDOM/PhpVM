@@ -57,17 +57,17 @@
         },
         {
             "name": "81",
-            "version": "8.1.29",
+            "version": "8.1.30",
             "url": "https://windows.php.net/downloads/releases/php-8.1.30-nts-Win32-vs16-x64.zip"
         },
         {
             "name": "82",
-            "version": "8.2.21",
+            "version": "8.2.25",
             "url": "https://windows.php.net/downloads/releases/php-8.2.25-nts-Win32-vs16-x64.zip"
         },
         {
             "name": "83",
-            "version": "8.3.9",
+            "version": "8.3.13",
             "url": "https://windows.php.net/downloads/releases/php-8.3.13-nts-Win32-vs16-x64.zip"
         },
         {
