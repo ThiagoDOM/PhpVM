@@ -1,7 +1,7 @@
 if ([Environment]::Is64BitOperatingSystem) {
     try {
         $web_client = new-object system.net.webclient
-        $jsonContent = $web_client.DownloadString("https://raw.githubusercontent.com/ThiagoDOM/PhpVM/main/src/list_x64.json") | ConvertFrom-Json
+        $jsonContent = $web_client.DownloadString("https://raw.githubusercontent.com/ThiagoDOM/PhpVM/main/src/list_x64.json?12") | ConvertFrom-Json
     }
     catch {
         $jsonContent = Get-Content 'C:\PhpVM\src\list_x64.json' | ConvertFrom-Json
@@ -10,7 +10,7 @@ if ([Environment]::Is64BitOperatingSystem) {
 else {
     try {
         $web_client = new-object system.net.webclient
-        $jsonContent = $web_client.DownloadString("https://raw.githubusercontent.com/ThiagoDOM/PhpVM/main/src/list_x86.json") | ConvertFrom-Json 2>$null
+        $jsonContent = $web_client.DownloadString("https://raw.githubusercontent.com/ThiagoDOM/PhpVM/main/src/list_x86.json?12") | ConvertFrom-Json 2>$null
     }
     catch {
         $jsonContent = Get-Content 'C:\PhpVM\src\list_x86.json' | ConvertFrom-Json
