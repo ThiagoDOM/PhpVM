@@ -58,22 +58,22 @@
         {
             "name": "81",
             "version": "8.1.29",
-            "url": "https://windows.php.net/downloads/releases/php-8.1.29-nts-Win32-vs16-x86.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.1.30-nts-Win32-vs16-x86.zip"
         },
         {
             "name": "82",
             "version": "8.2.21",
-            "url": "https://windows.php.net/downloads/releases/php-8.2.21-nts-Win32-vs16-x86.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.2.25-nts-Win32-vs16-x86.zip"
         },
         {
             "name": "83",
             "version": "8.3.9",
-            "url": "https://windows.php.net/downloads/releases/php-8.3.9-nts-Win32-vs16-x86.zip"
+            "url": "https://windows.php.net/downloads/releases/php-8.3.13-nts-Win32-vs16-x86.zip"
         },
         {
             "name": "84",
             "version": "8.4.0alpha1",
-            "url": "https://windows.php.net/downloads/qa/php-8.4.0alpha1-nts-Win32-vs17-x86.zip"
+            "url": "https://windows.php.net/downloads/qa/php-8.4.0RC4-Win32-vs17-x86.zip"
         }
     ]
 }
