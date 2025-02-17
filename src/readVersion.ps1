@@ -31,14 +31,14 @@ foreach ($version in $versions) {
 
 if ($url) {
     if ($url -Match "x64") {
-        Write-Host "Version: $ver x64"
+        Write-Host "Version: $ver x64" -ForegroundColor Green
     }
     else {
-        Write-Host "Version: $ver x86"
+        Write-Host "Version: $ver x86" -ForegroundColor Green
     }
 }
 else {
-    Write-Host "Version not found"
+    Write-Host "Version not found" -ForegroundColor Red
 }
 
 return $url

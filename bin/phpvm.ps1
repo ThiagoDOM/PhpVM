@@ -7,6 +7,10 @@ if($action1 -eq "install") {
     C:\PhpVM\src\installVersion.ps1 $action2
 }
 
+if($action1 -eq "update") {
+    C:\PhpVM\src\updateVersion.ps1
+}
+
 if($action1 -eq "list") {
     C:\PhpVM\src\showVersions.ps1
 }
@@ -27,6 +31,7 @@ if($action1 -eq "ini") {
     C:\PhpVM\src\openIni.ps1
 }
 
+
 if($action1 -eq "help" -or !$action1) {
     Write-Host ""
     Write-Host "List of commands:"
@@ -34,6 +39,8 @@ if($action1 -eq "help" -or !$action1) {
     Write-Host "  -show list of versions avaliable for download"
     Write-Host " phpvm install <version> | e.g. phpvm install 82" -ForegroundColor Green
     Write-Host "  -install specific version of PHP in your windows"
+    Write-Host " phpvm update <version> | e.g. phpvm update 82" -ForegroundColor Green
+    Write-Host "  -install/update specific version of PHP in your windows"
     Write-Host " phpvm set <version> | e.g. phpvm set 82" -ForegroundColor Green
     Write-Host "  -define specific version of PHP"
     Write-Host " phpvm remove <version> | e.g. phpvm remove 82" -ForegroundColor Green

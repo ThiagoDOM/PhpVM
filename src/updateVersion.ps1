@@ -1,13 +1,8 @@
 $version = $args[0]
     
 if ($version) {
-    # Check version exists
     $destinationPath = "C:\PhpVM\versions\$version"
-    if (Test-Path -Path $destinationPath) {
-        Write-Host "The version $version already exists, try using the 'phpvm update $version' command." -ForegroundColor Yellow
-        exit
-    }
-
+    $update = Test-Path -Path $destinationPath
     $url = C:\PhpVM\src\readVersion.ps1 $version
     if ($url) {
         Write-Host "Starting download..." -ForegroundColor Green
@@ -29,8 +24,11 @@ if ($version) {
 
         # Exclusão do arquivo temp.zip
         Remove-Item "C:\PhpVM\src\temp.zip" -Force
-
-        Write-Host "Installation complete!" -ForegroundColor Green
+        if ($update) {
+            Write-Host "Update complete!" -ForegroundColor Green
+        } else {
+            Write-Host "Installation complete!" -ForegroundColor Green
+        }
     }
     else {
         Write-Host "Try another version, see in the list using 'phpvm list'" -ForegroundColor Yellow
