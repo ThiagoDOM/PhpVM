@@ -42,3 +42,14 @@ phpvm
 ## Screenshots
 
 ![](https://i.imgur.com/5Q4nXRx.png)
+
+
+## Uninstall
+
+To uninstall PhpVM follow these steps:
+
+1. Remove the paths from the environment variables, the paths are "C:\PhpVM\bin", "C:\php".
+
+2. Delete the symbolic link, it is located in "C:\php".
+
+3. Delete the PhpVM folder, it is located at "C:\PhpVM"

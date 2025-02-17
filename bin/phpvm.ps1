@@ -3,12 +3,16 @@ $action2 = $args[1]
 
 # Write-Host "$action1 $action2"
 
-if($action1 -eq "install") {
+if($action1 -eq "install") { # This will be deleted
     C:\PhpVM\src\installVersion.ps1 $action2
 }
 
-if($action1 -eq "update") {
+if($action1 -eq "update") { # This will be deleted
     C:\PhpVM\src\updateVersion.ps1 $action2
+}
+
+if($action1 -eq "new") { # This will be changed
+    C:\PhpVM\src\installRelease.ps1 $action2
 }
 
 if($action1 -eq "list") {
@@ -52,3 +56,5 @@ if($action1 -eq "help" -or !$action1) {
     Write-Host ""
 }
     
+# basePath
+$global:basePath = "C:\PhpVM\"

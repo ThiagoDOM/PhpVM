@@ -4,7 +4,7 @@ if ([Environment]::Is64BitOperatingSystem) {
         $jsonContent = $web_client.DownloadString("https://raw.githubusercontent.com/ThiagoDOM/PhpVM/main/src/list_x64.json") | ConvertFrom-Json
     }
     catch {
-        $jsonContent = Get-Content 'C:\PhpVM\src\list_x64.json' | ConvertFrom-Json
+        $jsonContent = Get-Content '${global:basePath}src\list_x64.json' | ConvertFrom-Json
     }
     $os = "x64"
 }
@@ -14,7 +14,7 @@ else {
         $jsonContent = $web_client.DownloadString("https://raw.githubusercontent.com/ThiagoDOM/PhpVM/main/src/list_x86.json") | ConvertFrom-Json 2>$null
     }
     catch {
-        $jsonContent = Get-Content 'C:\PhpVM\src\list_x86.json' | ConvertFrom-Json
+        $jsonContent = Get-Content '${global:basePath}src\list_x86.json' | ConvertFrom-Json
     }
     $os = "x86"
 }
@@ -29,7 +29,7 @@ Write-Host "Your system is $os based."
 foreach ($version in $versions) {
     $name = $version.name
     $ver = $version.version
-    if (Test-Path -Path "C:\PhpVM\versions\$name") {
+    if (Test-Path -Path "${global:basePath}versions\$name") {
         Write-Host " $name ($ver)" -ForegroundColor Green
     }
     else {
