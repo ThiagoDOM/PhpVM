@@ -8,7 +8,7 @@ if($action1 -eq "install") {
 }
 
 if($action1 -eq "update") {
-    C:\PhpVM\src\updateVersion.ps1
+    C:\PhpVM\src\updateVersion.ps1 $action2
 }
 
 if($action1 -eq "list") {
