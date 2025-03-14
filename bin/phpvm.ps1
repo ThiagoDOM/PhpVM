@@ -1,3 +1,6 @@
+# basePath
+$global:basePath = "C:\PhpVM\"
+
 $action1 = $args[0]
 $action2 = $args[1]
 
@@ -55,6 +58,3 @@ if($action1 -eq "help" -or !$action1) {
     Write-Host "  -open php.ini from current version in VS Code "
     Write-Host ""
 }
-    
-# basePath
-$global:basePath = "C:\PhpVM\"
