@@ -22,8 +22,6 @@ else {
 $versions = $jsonContent.versions
 
 # Exiba cada versão
-
-Write-Host "All versions is Non Thread Safe."
 Write-Host "Your system is $os based."
 
 foreach ($version in $versions) {

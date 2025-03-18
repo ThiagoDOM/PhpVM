@@ -14,7 +14,7 @@ if ($version) {
         Write-Host "Starting download..." -ForegroundColor Green
 
         # Download do arquivo ZIP como temp.zip
-        Invoke-WebRequest -Uri $url -OutFile "src\temp.zip"
+        Invoke-WebRequest -Uri $url -OutFile "${global:basePath}src\temp.zip"
 
         Write-Host "Unzipping now..." -ForegroundColor Green
 
