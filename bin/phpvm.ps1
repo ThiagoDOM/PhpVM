@@ -434,13 +434,13 @@ function Main {
         Write-Host "List of commands:"
         Write-Host " phpvm list" -ForegroundColor Green
         Write-Host "  -show list of versions avaliable for download"
-        Write-Host " phpvm install | e.g. phpvm install" -ForegroundColor Green
+        Write-Host " phpvm install <?version> | e.g. phpvm install or phpvm install 84" -ForegroundColor Green
         Write-Host "  -install a version of PHP in your windows"
-        Write-Host " phpvm install-old <version> | e.g. phpvm install-old 82" -ForegroundColor Green
+        Write-Host " phpvm install-old <version> | e.g. phpvm install-old 84" -ForegroundColor Green
         Write-Host "  -install/update specific version of PHP in your windows"
-        Write-Host " phpvm set <version> | e.g. phpvm set 82" -ForegroundColor Green
+        Write-Host " phpvm set <version> | e.g. phpvm set 84" -ForegroundColor Green
         Write-Host "  -define specific version of PHP"
-        Write-Host " phpvm remove <version> | e.g. phpvm remove 82" -ForegroundColor Green
+        Write-Host " phpvm remove <version> | e.g. phpvm remove 84" -ForegroundColor Green
         Write-Host "  -remove specific version of PHP from your windows"
         Write-Host " phpvm path" -ForegroundColor Green
         Write-Host "  -add paths to Enviroment Variable PATH "
