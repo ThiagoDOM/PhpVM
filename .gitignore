@@ -3,3 +3,4 @@ versions/
 
 # Temporary File
 src/temp.zip
+bin/phpvm.exe

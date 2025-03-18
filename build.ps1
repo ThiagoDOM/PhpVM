@@ -1,0 +1,1 @@
+Invoke-ps2exe .\bin\phpvm.ps1 .\bin\phpvm.exe -iconFile .\icon.ico -title "PhpVM" -description 'Php Version Manager - Windows 10/11' -version "1.0.0"
