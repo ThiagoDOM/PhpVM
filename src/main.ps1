@@ -218,9 +218,22 @@ function SetVersion {
             Write-Host "Using now version $version"
     
             # Verifique se o script está sendo executado como administrador
-            if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" $version $path" -Verb RunAs; exit }
-            New-Item -Path "C:\php" -ItemType SymbolicLink -Value "${path}versions\$version"
-    
+            # if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" set $version" -Verb RunAs; exit }
+            # New-Item -Path "C:\php" -ItemType SymbolicLink -Value "${path}versions\$version"
+            # Write-Host -NoNewLine 'Press any key to continue...';
+            # $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
+            
+            if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+                Start-Process -FilePath powershell.exe -Verb RunAs -Wait -ArgumentList @(
+                    '-NoProfile',
+                    '-NoLogo',
+                    '-Command',
+                    "New-Item -Path 'C:\php' -ItemType SymbolicLink -Value '${path}versions\$version'"
+                )
+            } else {
+                New-Item -Path "C:\php" -ItemType SymbolicLink -Value "${path}versions\$version"
+            }
+
         }
         else {
             Write-Host "Version not found"
@@ -253,7 +266,7 @@ function OpenIni {
 function SetPaths {
     $path = ${global:basePath};
     
-    if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" $version $path" -Verb RunAs; exit }
+    if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" path" -Verb RunAs; exit }
     [Environment]::SetEnvironmentVariable("Path", $env:Path + ";${path}bin;C:\php", "User")
 }
 
@@ -412,7 +425,7 @@ function Main {
         ShowVersions
     }
 
-    if ($action1 -eq "set") {
+    if ($action1 -eq "set" -or $action1 -eq "use") {
         SetVersion -version $action2
     }
 
